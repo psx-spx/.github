@@ -1,0 +1,28 @@
+name: Report a problem
+description: Something on psx-spx is wrong, unclear or missing.
+body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: Which version of the site?
+      description: The banner at the top of every page says which one you are reading.
+      options:
+        - Stable (psx-spx.consoledev.net/, the human-maintained branch)
+        - Dev (psx-spx.consoledev.net/dev/, the AI-written branch)
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Link to the page and section.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: And how you know, if you can say (a test program, a capture, a datasheet).
+    validations:
+      required: true
